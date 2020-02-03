@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitryfokin/training-project-portfolio.git"
+  },
+  "keywords": [
+    "porfolio",
+    "webpack",
+    "pug",
+    "less"
+  ],
+  "author": "Dmitry Fokin <dkoder.dvl@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitryfokin/training-project-portfolio/issues"
+  },
+  "homepage": "https://github.com/dmitryfokin/training-project-portfolio#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
