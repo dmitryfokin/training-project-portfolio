@@ -1,0 +1,77 @@
+// >>> Секция проектов >>>
+.section-portfolio
+	.container
+		.section-portfolio__title
+			h2.title-2.anderline-dicoration.anderline-dicoration--midl Портфолио
+		// >>> фильтр портфолио >>>
+		.section-portfolio-filter
+			.portfolio-filter
+				ul.portfolio-filter__list
+					li.portfolio-filter__item
+						a.filter(data-filter='all', href='#!') Все работы
+					li.portfolio-filter__item
+						a.filter(data-filter='.filter-bootstrap', href='#!') Bootstrap
+					li.portfolio-filter__item
+						a.filter(data-filter='.filter-wordpress', href='#!') WordPress
+					li.portfolio-filter__item
+						a.filter(data-filter='.filter-frontend', href='#!') Frontend
+		// <<< фильтр портфолио <<<
+		.section-project-cards
+			.project-cards
+				// >>> Строка двух больших карточек >>>
+				.project-cards__row
+					// >>> Карточка проекта >>>
+					.project-card.row-half
+						.project-card__img-wrapper
+							img.project-card__img(src='./img/projects/project-img-001.jpg', alt='project')
+							a.btn.project-card__btn(href='#') Смотреть проект
+						.project-card__title.title-4
+							| Верстка “Форест тревел”
+						.project-card__desc
+							| Верстка многостраничного сайта.
+					// <<< Карточка проекта <<<
+					// >>> Карточка проекта >>>
+					.project-card.row-half
+						.project-card__img-wrapper
+							img.project-card__img(src='./img/projects/project-img-002.jpg', alt='project')
+							a.btn.project-card__btn(href='#') Смотреть проект
+						.project-card__title.title-4
+							| Верстка “Форест тревел”
+						.project-card__desc
+							| Верстка многостраничного сайта.
+					// <<< Карточка проекта <<<
+					// <<< Строка двух больших карточек <<<
+					// >>> Строка трех мальнких карточек >>>
+				#project-cards-list.project-cards__row
+					// >>> Карточка проекта >>>
+					.project-card.row-third.mix.filter-bootstrap.filter-frontend
+						.project-card__img-wrapper
+							img.project-card__img(src='./img/projects/project-img-003.jpg', alt='project')
+							a.btn.project-card__btn(href='#') Смотреть проект
+						.project-card__title.title-5
+							| Верстка “Форест тревел”
+						.project-card__desc
+							| Верстка многостраничного сайта.
+					// <<< Карточка проекта <<<
+					// >>> Карточка проекта >>>
+					.project-card.row-third.mix.filter-bootstrap.filter-wordpress
+						.project-card__img-wrapper
+							img.project-card__img(src='./img/projects/project-img-004.jpg', alt='project')
+							a.btn.project-card__btn(href='#') Смотреть проект
+						.project-card__title.title-5
+							| Верстка “Форест тревел”
+						.project-card__desc
+							| Верстка многостраничного сайта.
+					// <<< Карточка проекта <<<
+					// >>> Карточка проекта >>>
+					.project-card.row-third.mix.filter-wordpress
+						.project-card__img-wrapper
+							img.project-card__img(src='./img/projects/project-img-005.jpg', alt='project')
+							a.btn.project-card__btn(href='#') Смотреть проект
+						.project-card__title.title-5
+							| Верстка “Форест тревел”
+						.project-card__desc
+							| Верстка многостраничного сайта.
+					// <<< Карточка проекта <<<
+					// <<< Строка трех мальнких карточек <<<
+// <<< Секция проектов <<<

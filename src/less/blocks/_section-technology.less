@@ -1,0 +1,131 @@
+.section-technology {
+	padding-top: 135px;
+	padding-bottom: 55px;
+
+	background-image: url(./../../img/bg/line-4-bg.jpg);
+	background-repeat: repeat-y;
+	background-position: center;
+}
+
+.section-technology__title {
+	margin-bottom: 150px;
+
+	& h2 {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.technology-card {
+	position: relative;
+
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	margin-bottom: 80px;
+
+	&:hover .technology-card__title h3::befor {
+		background-color: @color-focus-1;
+	}
+
+	& .technology-card__main {
+		text-align: right;
+		padding-left: 0;
+		padding-right: 40px;
+	}
+
+	&:nth-child(even) {
+		flex-direction: row;
+
+		& .technology-card__main {
+			text-align: left;
+			padding-left: 40px;
+			padding-right: 0;
+		}
+	}
+
+	&:first-child::before {
+		content: "";
+		display: block;
+
+		position: absolute;
+
+		top: -80px;
+		left: ~"calc(50% - 2px)";
+
+		width: 4px;
+		height: 60px;
+
+		background-color: rgb(225, 238, 244);
+
+		border-radius: 2px;
+	}
+}
+
+.technology-card__img-wrapper {
+	position: relative;
+	width: 74px;
+
+	&::after {
+		content: "";
+		display: block;
+
+		position: absolute;
+
+		bottom: -60px;
+		left: 35px;
+
+		width: 4px;
+		height: 70%;
+
+		background-color: rgb(225, 238, 244);
+
+		border-radius: 2px;
+	}
+
+}
+
+.technology-card__img-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 74px;
+	height: 74px;
+
+	border-radius: 28px;
+	box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+}
+
+.technology-card__img {
+	display: block;
+	width: 40px;
+	height: auto;
+
+	min-width: unset;
+}
+
+.technology-card__main {
+	padding-top: 25px;
+	width: ~"calc(50% - 39px)";
+}
+
+.technology-card__title {
+	margin-bottom: 10px;
+}
+
+.technology-card__desc {
+	margin-bottom: 12px;
+
+	font-size: 18px;
+	font-weight: 500;
+	color: @color-main-font;
+	line-height: 1.2;
+}
+
+.technology-card__time {
+	font-size: 18px;
+	color: @color-main-font;
+	font-weight: 700;
+	line-height: 1.2;
+}

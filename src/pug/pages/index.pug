@@ -1,0 +1,21 @@
+extends ../layouts/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block header
+    include ../blocks/nav
+    include ../blocks/logo
+
+block content
+    section
+        .container
+            include ../blocks/projects
+            include ../blocks/technology
+            include ../blocks/contacts
+
+block footer
+    .container
+        include ../blocks/footer

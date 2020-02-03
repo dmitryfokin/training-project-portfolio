@@ -1,0 +1,86 @@
+.nav__wrapper {
+	margin: 75px auto 150px;
+	max-width: 1400px;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-logo {
+	position: relative;
+
+	font-size: 42px;
+	color: rgb(0, 0, 0);
+	line-height: 1.2;
+	font-weight: 900;
+}
+
+.nav-menu {
+	display: flex;
+
+	& li {
+		margin-right: 80px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.nav-menu__link {
+	padding: 5px;
+
+	font-size: 20px;
+	color: rgb(0, 0, 0);
+	font-weight: 700;
+
+	&:focus {
+		border: 2px dotted @color-focus-1;
+	}
+}
+
+.list-social-icons {
+	display: flex;
+
+	& li {
+		margin-right: 18px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.list-social-icons__img {
+	width: 32px;
+	height: 32px;
+
+	font-size: 32px;
+	color: #000;
+}
+
+.list-social-icons__img--in {
+
+	&:hover,
+	&:active {
+		color: #0077b5;
+	}
+}
+
+.list-social-icons__img--github {
+
+	&:hover,
+	&:active {
+		color: #6cc644;
+	}
+}
+
+.list-social-icons__img--vk {
+
+	&:hover,
+	&:active {
+		color: #45668e;
+	}
+}

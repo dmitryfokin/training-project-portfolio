@@ -1,0 +1,63 @@
+// >>> Контакты >>>
+.section-contacts
+	.container
+		.section-contacts__title
+			h2.title-2.anderline-dicoration.anderline-dicoration--midl Контакты
+		.section-contacts__row
+			.contacts-info-wrapper
+				.cintacts-info__slogan
+					| Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы
+					| над проектом — напишите мне.
+				.contacts-info__list-contacts-wrapper
+					.list-contacts
+						ul.list-contacts__list
+							li.list-contacts__item
+								.list-contacts__item-lable
+									| Email
+								.list-contacts__item-value
+									a.list-contacts__item-value-link(href='mailto:dkoder.dvl@gmail.com') dkoder.dvl@gmail.com
+							li.list-contacts__item
+								.list-contacts__item-lable
+									| Skype
+								.list-contacts__item-value
+									a.list-contacts__item-value-link(href='skype:dkoder.dvl') dkoder.dvl
+							li.list-contacts__item
+								.list-contacts__item-lable
+									| Телефон
+								.list-contacts__item-value
+									a.list-contacts__item-value(href='tel:+79991112233')
+										| +7 (999)
+										| 111-22-33
+							li.list-contacts__item
+								.list-contacts__item-lable
+									| Адрес
+								.list-contacts__item-value
+									| Россия, Москва
+				.contacts-info__list-social-icons-wrapper
+					ul.in-touch-social-icons
+						li
+							a(href='#')
+								i.fab.fa-github.in-touch-social-icon.in-touch-social-icon-github
+						li
+							a(href='#')
+								i.fab.fa-telegram.in-touch-social-icon.in-touch-social-icon-telegram
+						li
+							a(href='#')
+								i.fab.fa-vk.in-touch-social-icon.in-touch-social-icon-vk
+						li
+							a(href='#')
+								i.fab.fa-facebook.in-touch-social-icon.in-touch-social-icon-facebook
+			.form-callback-wrapper
+				form.form-callback(action='#', method='POST')
+					.form-callback__input-wrapper
+						input.form-callback__input(type='email', name='email')
+						span.fake-placeholder Ваш email
+					.form-callback__input-wrapper
+						input.form-callback__input(type='text', name='theme')
+						span.fake-placeholder Тема письма
+					.form-callback__message-wrapper
+						textarea.form-callback__textarea(name='message', cols='30', rows='4')
+						span.fake-placeholder Сообщение
+					.form-callback__submit-wrapper
+						input.btn(type='submit', value='Отправить')
+// <<< Контакты <<<

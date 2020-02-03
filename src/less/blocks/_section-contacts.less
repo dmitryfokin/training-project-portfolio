@@ -1,0 +1,177 @@
+.section-contacts {
+	padding: 150px 0;
+
+	background-color: #f4f8f9;
+
+	background-image: url("./../../img/bg/line-5-bg-2_02.jpg");
+	background-repeat: repeat-y;
+	background-position: center;
+}
+
+.section-contacts__title {
+	margin-bottom: 70px;
+
+	& h2 {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.section-contacts__row {
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+
+	&::after {
+		content: "";
+		display: block;
+
+		position: absolute;
+		top: 0;
+		left: -340px;
+
+		width: 448px;
+		height: 280px;
+
+		background-image: url("./../../img/bg/bg-66.png");
+	}
+}
+
+.contacts-info-wrapper {
+	width: 40%;
+
+	padding-top: 30px;
+}
+
+.form-callback-wrapper {
+	width: 50%;
+	padding-left: 40px;
+}
+
+.contacts-info__list-contacts-wrapper {
+	margin-bottom: 45px;
+}
+
+.cintacts-info__slogan {
+	margin-bottom: 45px;
+
+	font-size: 20px;
+	color: #000;
+	line-height: 1.6;
+	text-align: left;
+}
+
+.list-contacts__item {
+	display: flex;
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.list-contacts__item-lable {
+	width: 25%;
+
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.list-contacts__item-value {
+	font-size: 20px;
+	color: #96969d;
+	line-height: 1.2;
+	font-weight: 500;
+}
+
+.list-contacts__item-value-link {
+	color: rgb(3, 155, 229);
+}
+
+.form-callback {
+	width: 511px;
+	min-height: 545px;
+
+	padding: 55px 60px 50px 65px;
+
+	background-color: #fff;
+	box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+}
+
+.form-callback__input-wrapper {
+	position: relative;
+	margin-bottom: 55px;
+
+}
+
+.form-callback__input {
+	width: 100%;
+	height: 50px;
+
+	padding: 0 5px;
+
+	font-size: 20px;
+	color: @color-main-font;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: left;
+
+	border: none;
+	border-bottom: 2px solid #eaeaea;
+
+	&:active,
+	&:focus {
+		border-bottom-color: @color-focus-1;
+	}
+}
+
+.form-callback__message-wrapper {
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.form-callback__textarea {
+	width: 100%;
+
+	padding: 10px 5px;
+
+	font-size: 20px;
+	color: @color-main-font;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: left;
+
+	border: none;
+	border-bottom: 2px solid #eaeaea;
+
+	outline: none;
+
+	&:active,
+	&:focus {
+		border-bottom-color: @color-focus-1;
+	}
+}
+
+.fake-placeholder {
+	position: absolute;
+
+	left: 5px;
+	top: 10px;
+
+	pointer-events: none;
+	font-size: 20px;
+	color: #bcbcbc;
+	font-weight: 700;
+	line-height: 1.2;
+	text-align: left;
+
+	transition: 0.5s;
+
+	&.active {
+		top: -15px;
+		font-size: 16px;
+		color: #ed9626;
+	}
+}
