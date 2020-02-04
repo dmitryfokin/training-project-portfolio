@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
 	entry: {
@@ -26,6 +27,16 @@ module.exports = {
 					pretty: true,
 				},
 			},
+			{
+				test: /\.less$/,
+				use: [{loader: MiniCSSExtractPlugin.loader},
+					{
+						loader: 'css-loader', options: {
+							url: false,
+						},
+					},
+					'less-loader']
+			}
 		]
 	},
 	plugins: [
@@ -38,5 +49,8 @@ module.exports = {
 			template: path.resolve(__dirname, 'src', 'pug', 'pages', 'index.pug'),
 			filename: path.resolve(__dirname, 'dist', 'index.html')
 		}),
+		new MiniCSSExtractPlugin({
+			filename: `./css/[name].css`
+		})
 	]
 }
