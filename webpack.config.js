@@ -31,11 +31,20 @@ module.exports = {
 				test: /\.less$/,
 				use: [{loader: MiniCSSExtractPlugin.loader},
 					{
-						loader: 'css-loader', options: {
+						loader: 'css-loader',
+						options: {
 							url: false,
-						},
+							sourceMap: true,
+						}
 					},
-					'less-loader']
+					{
+						loader: 'less-loader',
+						options: {
+							relativeUrls: false,
+							sourceMap: true,
+						}
+					},
+				]
 			}
 		]
 	},

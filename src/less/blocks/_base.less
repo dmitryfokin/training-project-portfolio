@@ -69,7 +69,7 @@ button {
 }
 
 .mix {
-	//display: none;
+	display: none;
 }
 
 .container {
@@ -102,12 +102,20 @@ button {
 		position: absolute;
 
 		bottom: 6px;
-		left: -5px;
-		right: -5px;
 		height: 10px;
 
 		background-color: @color-main;
 		z-index: -1;
+
+		@media (min-width: 768px) {
+			left: 10px;
+			right: 10px;
+		}
+
+		@media (min-width: 1200px) {
+			left: -5px;
+			right: -5px;
+		}
 	}
 }
 
@@ -120,8 +128,18 @@ button {
 
 .anderline-dicoration--big {
 	&::after {
-		bottom: 22px;
+		bottom: 10%;
 		height: 12px;
+
+		@media (min-width: 768px) {
+			bottom: 15%;
+			left: -5px;
+			right: -5px;
+		}
+
+		@media (min-width: 1200px) {
+			bottom: 20%;
+		}
 	}
 }
 
