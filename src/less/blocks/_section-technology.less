@@ -20,51 +20,68 @@
 	position: relative;
 
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	margin-bottom: 80px;
+
+	@media (min-width: 768px) {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+	}
 
 	&:hover .technology-card__main .technology-card__title h3::before {
 		background-color: @color-focus-1;
 	}
 
 	& .technology-card__main {
-		text-align: right;
+		text-align: left;
 		padding-left: 0;
-		padding-right: 40px;
+
+		@media (min-width: 768px) {
+			text-align: right;
+			padding-right: 40px;
+		}
 	}
 
 	&:nth-child(even) {
-		flex-direction: row;
+		@media (min-width: 768px) {
+			flex-direction: row;
 
-		& .technology-card__main {
-			text-align: left;
-			padding-left: 40px;
-			padding-right: 0;
+			& .technology-card__main {
+				text-align: left;
+				padding-left: 40px;
+				padding-right: 0;
+			}
 		}
 	}
 
 	&:first-child::before {
-		content: "";
-		display: block;
+		@media (min-width: 768px) {
+			content: "";
+			display: block;
 
-		position: absolute;
+			position: absolute;
 
-		top: -80px;
-		left: ~"calc(50% - 2px)";
+			top: -80px;
+			left: ~"calc(50% - 2px)";
 
-		width: 4px;
-		height: 60px;
+			width: 4px;
+			height: 60px;
 
-		background-color: rgb(225, 238, 244);
+			background-color: rgb(225, 238, 244);
 
-		border-radius: 2px;
+			border-radius: 2px;
+		}
 	}
 }
 
 .technology-card__img-wrapper {
 	position: relative;
 	width: 74px;
+	margin-right: 25px;
+
+	@media (min-width: 768px) {
+		margin-right: unset;
+	}
 
 	&::after {
 		content: "";
@@ -106,8 +123,10 @@
 }
 
 .technology-card__main {
-	padding-top: 25px;
-	width: ~"calc(50% - 39px)";
+	@media (min-width: 768px) {
+		padding-top: 25px;
+		width: ~"calc(50% - 39px)";
+	}
 }
 
 .technology-card__title {
@@ -117,15 +136,31 @@
 .technology-card__desc {
 	margin-bottom: 12px;
 
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 500;
 	color: @color-main-font;
 	line-height: 1.2;
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 18px;
+	}
 }
 
 .technology-card__time {
-	font-size: 18px;
+	font-size: 14px;
 	color: @color-main-font;
 	font-weight: 700;
 	line-height: 1.2;
+
+	@media (min-width: 768px) {
+		font-size: 18px;
+	}
+
+	@media (min-width: 1200px) {
+		//font-size: 18px;
+	}
 }

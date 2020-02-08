@@ -21,50 +21,80 @@
 	position: relative;
 
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+
+	@media (min-width: 768px) {
+		justify-content: space-between;
+		flex-direction: row;
+	}
 
 	&::after {
-		content: "";
-		display: block;
 
-		position: absolute;
-		top: 0;
-		left: -340px;
+		@media (min-width: 1200px) {
+			content: "";
+			display: block;
 
-		width: 448px;
-		height: 280px;
+			position: absolute;
+			top: 0;
+			left: -340px;
 
-		background-image: url("@{paht-img}bg/bg-66.png");
+			width: 448px;
+			height: 280px;
+
+			background-image: url("@{paht-img}bg/bg-66.png");
+		}
 	}
 }
 
 .contacts-info-wrapper {
-	width: 40%;
 
-	padding-top: 30px;
+	@media (min-width: 768px) {
+		width: 40%;
+		padding-top: 30px;
+	}
 }
 
 .form-callback-wrapper {
-	width: 50%;
-	padding-left: 40px;
+
+	@media (min-width: 768px) {
+		width: 338px;
+	}
+
+	@media (min-width: 1200px) {
+		width: 50%;
+		padding-left: 40px;
+	}
 }
 
 .contacts-info__list-contacts-wrapper {
 	margin-bottom: 45px;
 }
 
-.cintacts-info__slogan {
+.contacts-info__slogan {
 	margin-bottom: 45px;
 
-	font-size: 20px;
+	font-size: 16px;
 	color: #000;
 	line-height: 1.6;
 	text-align: left;
+
+	@media (min-width: 768px) {
+		margin-bottom: 45px;
+
+		font-size: 18px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom: 45px;
+
+		font-size: 20px;
+	}
 }
 
 .list-contacts__item {
 	display: flex;
 	margin-bottom: 30px;
+	flex-wrap: wrap;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -72,18 +102,34 @@
 }
 
 .list-contacts__item-lable {
-	width: 25%;
+	width: 100%;
 
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 1.2;
+
+	@media (min-width: 768px) {
+		width: 25%;
+	}
+
+	@media (min-width: 1200px) {
+		width: 25%;
+		font-size: 20px;
+	}
 }
 
 .list-contacts__item-value {
-	font-size: 20px;
+	font-size: 18px;
 	color: #96969d;
 	line-height: 1.2;
 	font-weight: 500;
+
+	@media (min-width: 768px) {
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 20px;
+	}
 }
 
 .list-contacts__item-value-link {
@@ -91,19 +137,33 @@
 }
 
 .form-callback {
-	width: 511px;
-	min-height: 545px;
+	width: 100%;
+	//min-height: 545px;
 
-	padding: 55px 60px 50px 65px;
+	padding: 40px 15px;
 
 	background-color: #fff;
-	box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+	box-shadow: 0px 28px 40px 0px rgba(194, 219, 235, 1);
+
+	@media (min-width: 768px) {
+		width: 338px;
+		//min-height: 545px;
+		box-shadow: 0px 28px 80px 0px rgba(194, 219, 235, 1);
+	}
+
+	@media (min-width: 1200px) {
+		width: 511px;
+		min-height: 545px;
+
+		padding: 55px 60px 50px 65px;
+
+		box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
+	}
 }
 
 .form-callback__input-wrapper {
 	position: relative;
 	margin-bottom: 55px;
-
 }
 
 .form-callback__input {
