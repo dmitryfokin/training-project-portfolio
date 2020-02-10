@@ -1,22 +1,50 @@
 // <<< навигация <<<
 .nav__wrapper
-	nav.nav
-		a.nav-logo.anderline-dicoration(href='#') ДФ
-		ul.nav-menu
-			li
-				a.nav-menu__link.anderline-dicoration(href='#') Главная
-			li
-				a.nav-menu__link.anderline-dicoration.anderline-dicoration--link(href='#') Работы
-			li
-				a.nav-menu__link.anderline-dicoration.anderline-dicoration--link(href='#') Контакты
-		ul.list-social-icons
-			li
-				a(href='#')
-					i.fab.fa-linkedin-in.list-social-icons__img.list-social-icons__img--in
-			li
-				a(href='#')
-					i.fab.fa-github.list-social-icons__img.list-social-icons__img--github
-			li
-				a(href='#')
-					i.fab.fa-vk.list-social-icons__img.list-social-icons__img--vk
+    nav.nav
+        a.nav-logo.anderline-dicoration(href='#') ДФ
+        .nav-descktop
+            ul.nav-menu
+                li
+                    a.nav-menu__link.anderline-dicoration(href='#') Главная
+                li
+                    a.nav-menu__link.anderline-dicoration.anderline-dicoration--link(href='#') Работы
+                li
+                    a.nav-menu__link.anderline-dicoration.anderline-dicoration--link(href='#') Контакты
+            ul.list-social-icons
+                li
+                    a(href='#')
+                        i.fab.fa-linkedin-in.list-social-icons__img.list-social-icons__img--in
+                li
+                    a(href='#')
+                        i.fab.fa-github.list-social-icons__img.list-social-icons__img--github
+                li
+                    a(href='#')
+                        i.fab.fa-vk.list-social-icons__img.list-social-icons__img--vk
+        .nav-mobile
+            #menu-toggle.menu-icon
+                .menu-icon-line
+        .mobile-nav-overlay
+        #mobile-nav.mobile-nav
+            a.nav-logo.anderline-dicoration(href='#') ДФ
+            ul.mobile-nav__list
+                li.mobile-nav__item
+                    a(href="#!").mobile-nav__link Услуги
+                li.mobile-nav__item
+                    a(href="#!").mobile-nav__link Работы
+                li.mobile-nav__item
+                    a(href="#!").mobile-nav__link Контакты
+            .mobile-nav__social-icons-wrapper
+                ul.in-touch-social-icons
+                    li
+                        a(href='#')
+                            i.fab.fa-github.in-touch-social-icon.in-touch-social-icon-github
+                    li
+                        a(href='#')
+                            i.fab.fa-telegram.in-touch-social-icon.in-touch-social-icon-telegram
+                    li
+                        a(href='#')
+                            i.fab.fa-vk.in-touch-social-icon.in-touch-social-icon-vk
+                    li
+                        a(href='#')
+                            i.fab.fa-facebook.in-touch-social-icon.in-touch-social-icon-facebook
 // <<< навигация <<<

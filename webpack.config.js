@@ -50,10 +50,16 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new CopyWebpackPlugin([{
-			from: path.resolve(__dirname, 'src', 'img'),
-			to: path.resolve(__dirname, 'dist', 'img')
-		}]),
+		new CopyWebpackPlugin([
+			{
+				from: path.resolve(__dirname, 'src', 'img'),
+				to: path.resolve(__dirname, 'dist', 'img')
+			},
+			{
+				from: path.resolve(__dirname, 'src', 'libs'),
+				to: path.resolve(__dirname, 'dist', 'libs')
+			}
+		]),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, 'src', 'pug', 'pages', 'index.pug'),
 			filename: path.resolve(__dirname, 'dist', 'index.html')
