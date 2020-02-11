@@ -6,15 +6,20 @@ block variables
     - var pageClass = 'index-page';
 
 block header
-    include ../blocks/nav
-    include ../blocks/logo
+    include ../blocks/_nav
+    .container
+        .header-top-row
+            include ../blocks/_about-me
+        .header-bottom-row
+            include ../blocks/_skills
+            include ../blocks/_in-touch
 
 block content
     section
-        include ../blocks/projects
-        include ../blocks/technology
-        include ../blocks/contacts
+        include ../blocks/_projects
+        include ../blocks/_technology
+        include ../blocks/_contacts
 
 block footer
     .container
-        include ../blocks/footer
+        include ../blocks/_footer

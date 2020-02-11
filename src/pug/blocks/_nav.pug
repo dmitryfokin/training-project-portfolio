@@ -1,0 +1,28 @@
+// <<< навигация <<<
+nav.nav
+    a.nav-logo.anderline-dicoration(href='index.html') ДФ
+    .nav-menu
+        a.anderline-dicoration(href='#') Главная
+        a.anderline-dicoration.anderline-dicoration--link(href='#') Работы
+        a.anderline-dicoration.anderline-dicoration--link(href='#contacts') Контакты
+    .nav-social-icons
+        a(href='#').nav-social-icon-in
+            i.fab.fa-linkedin-in
+        a(href='#').nav-social-icon-github
+            i.fab.fa-github
+        a(href='#').nav-social-icon-vk
+            i.fab.fa-vk
+    .menu-icon#menu-toggle
+        .menu-icon-line
+    .mobile-nav-overlay
+    .mobile-nav#mobile-nav
+        a.nav-logo.mobile-nav-logo.anderline-dicoration(href='index.html') ДФ
+
+        .mobile-nav-menu
+            a(href="#!") Услуги
+            a(href="#!") Работы
+            a(href="#contacts") Контакты
+
+        .mobile-nav-social-icons
+            include ../blocks/_social-icons
+// <<< навигация <<<

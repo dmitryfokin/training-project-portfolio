@@ -38,6 +38,7 @@
     "webpack-dev-server": "^3.10.2"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "mixitup": "^3.3.1"
   }
 }

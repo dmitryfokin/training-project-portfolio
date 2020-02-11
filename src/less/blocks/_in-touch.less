@@ -1,0 +1,36 @@
+
+.in-touch {
+	width: 100%;
+
+
+	@media (min-width: 768px) {
+		width: ~"calc(50% - 16px)";
+	}
+
+	@media (min-width: 1200px) {
+		width: 360px;
+	}
+}
+
+.in-touch__title {
+	margin-bottom: 35px;
+}
+
+.in-touch__social-icons {
+	margin-bottom: 35px;
+}
+
+.in-touch__email {
+	text-decoration: underline;
+	font-size: 24px;
+	color: @color-main-font;
+	line-height: 1.2;
+
+	&:hover {
+		color: @color-alt-1;
+	}
+
+	&:active {
+		color: @color-focus-2;
+	}
+}
