@@ -16,11 +16,17 @@
 
 .about-me__img {
 	position: relative;
-	width: 100%;
 
-	z-index: 5;
+	margin-bottom: 20px;
+
+	width: 100%;
+	max-width: 320px;
+
+	z-index: 2;
 
 	@media (min-width: 768px) {
+		margin-bottom: 0;
+		max-width: unset;
 		width: ~"calc(50% - 16px)";
 		//padding-top: 12px;
 	}

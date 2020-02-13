@@ -5,6 +5,19 @@ block variables
     - var description = 'Description for Webpack + Pug';
     - var pageClass = 'index-page';
 
+block pagnav
+    a(href="#header")#backTop
+        i.fas.fa-angle-double-up
+    ul#page-nav
+        li.page-nav__active
+            a(href="#header")
+        li
+            a(href="#projects")
+        li
+            a(href="#technology")
+        li
+            a(href="#contacts")
+
 block header
     include ../blocks/_nav
     .container
@@ -15,10 +28,9 @@ block header
             include ../blocks/_in-touch
 
 block content
-    section
-        include ../blocks/_projects
-        include ../blocks/_technology
-        include ../blocks/_contacts
+    include ../blocks/_projects
+    include ../blocks/_technology
+    include ../blocks/_contacts
 
 block footer
     .container

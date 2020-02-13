@@ -11,10 +11,14 @@
 	background-repeat: repeat-y;
 	background-position: center;
 
-	max-width: 1600px;
 	z-index: 1;
 
+	@media (min-width: 768px) {
+		max-width: 768px;
+	}
+
 	@media (min-width: 1200px) {
+		max-width: 1600px;
 		padding-top: 60px;
 	}
 }
@@ -37,7 +41,8 @@
 		content: "";
 		display: block;
 
-		width: 100%;
+		width: 290px;
+		height: 280px;
 
 		background-image: url("@{paht-img}bg/header-mobile-bg.png");
 		background-repeat: no-repeat;
@@ -48,6 +53,9 @@
 
 		@media (min-width: 768px) {
 			background-image: url("@{paht-img}bg/header-desktop-bg.png");
+			width: 900px;
+			height: 400px;
+			transform: translate(~"calc(450px - 50%)", -60px);
 		}
 
 		@media (min-width: 1200px) {

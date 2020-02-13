@@ -1,16 +1,36 @@
-// import * as $ from 'jquery'
-// import './js/jquery.mixitup.min'
-
 import './less/main.less'
-import mixitup from 'mixitup';
 
-$(document).ready(function () {
+let ready = $(document).ready(function () {
+
+  $('#page-nav').onePageNav({
+    currentClass: 'page-nav__active',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing',
+    begin: function () {
+    },
+    end: function () {
+    },
+    scrollChange: function ($currentListItem) {
+    },
+  })
+
+  $("#backTop").hide()
+
+  window.addEventListener('scroll', throttle(function () {
+    if ($(this).scrollTop() > 200) {
+      $("#backTop").fadeIn()
+    } else {
+      $("#backTop").fadeOut()
+    }
+  }, 300));
 
   // filter projects
-  // $('#project-cards-list').mixItUp()
+  $('#project-cards-list').mixItUp()
 
-  var mixer = mixitup('#project-cards-list');
-
+  //var mixer = mixitup('#project-cards-list');
 
   // form callback
   $('.form-callback__input, .form-callback__textarea').focus(function (e) {
@@ -33,12 +53,20 @@ $(document).ready(function () {
 
   menuToggle.onclick = function () {
     menuToggle.classList.toggle('menu-icon-active');
-    mobileNavContainer.classList.toggle('mobile-nav--active-1');
-    mobileNavContainer.classList.toggle('mobile-nav--active-2');
+    mobileNavContainer.classList.toggle('mobile-nav--active');
     mobileOverlay.classList.toggle('mobile-nav-overlay--active');
     body.classList.toggle('no-scroll');
   }
 
-})
+  function throttle(fn, wait) {
+    let time = Date.now()
 
+    return () => {
+      if ((time + wait - Date.now()) < 0) {
+        fn()
+        time = Date.now()
+      }
+    }
+  }
 
+});
