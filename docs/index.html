@@ -9,21 +9,27 @@
     <title>portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300,400,500,700,800,900&amp;display=swap&amp;subset=cyrillic-ext" rel="stylesheet">
   <link href="./css/main.css" rel="stylesheet"></head>
-  <body>
-    <header class="header">
+  <body><a href="#header" id="backTop"><i class="fas fa-angle-double-up"></i></a>
+    <ul id="page-nav">
+      <li class="page-nav__active"><a href="#header"></a></li>
+      <li><a href="#projects"></a></li>
+      <li><a href="#technology"></a></li>
+      <li><a href="#contacts"></a></li>
+    </ul>
+    <header class="header" id="header">
 <!-- <<< навигация <<<-->
 <nav class="nav"><a class="nav-logo anderline-dicoration" href="index.html">ДФ</a>
   <div class="nav-menu"><a class="anderline-dicoration" href="#">Главная</a><a class="anderline-dicoration anderline-dicoration--link" href="#">Работы</a><a class="anderline-dicoration anderline-dicoration--link" href="#contacts">Контакты</a></div>
   <div class="nav-social-icons"><a class="nav-social-icon-in" href="#"><i class="fab fa-linkedin-in"></i></a><a class="nav-social-icon-github" href="#"><i class="fab fa-github"></i></a><a class="nav-social-icon-vk" href="#"><i class="fab fa-vk"></i></a></div>
-  <div class="menu-icon" id="menu-toggle">
-    <div class="menu-icon-line"></div>
-  </div>
   <div class="mobile-nav-overlay"></div>
   <div class="mobile-nav" id="mobile-nav"><a class="nav-logo mobile-nav-logo anderline-dicoration" href="index.html">ДФ</a>
     <div class="mobile-nav-menu"><a href="#!">Услуги</a><a href="#!">Работы</a><a href="#contacts">Контакты</a></div>
     <div class="mobile-nav-social-icons">
 <div class="social-icons"><a class="social-icon-github" href="#"><i class="fab fa-github"></i></a><a class="social-icon-telegram" href="#"><i class="fab fa-telegram"></i></a><a class="social-icon-vk" href="#"><i class="fab fa-vk"></i></a><a class="social-icon-facebook" href="#"><i class="fab fa-facebook"></i></a></div>
     </div>
+  </div>
+  <div class="menu-icon" id="menu-toggle">
+    <div class="menu-icon-line"></div>
   </div>
 </nav>
 <!-- <<< навигация <<<-->
@@ -71,95 +77,118 @@
       </div>
     </header>
     <main class="main">
-      <section>
-        <!-- >>> Секция проектов >>>-->
-        <div class="section-portfolio">
-          <div class="container">
-            <div class="section-portfolio__title">
-              <h2 class="title-2 anderline-dicoration anderline-dicoration--midl">Портфолио</h2>
-            </div>
-            <!-- >>> фильтр портфолио >>>-->
-            <div class="section-portfolio-filter">
-              <div class="portfolio-filter">
-                <ul class="portfolio-filter__list">
-                  <li class="portfolio-filter__item"><a class="filter" data-filter="all" href="#!">Все работы</a></li>
-                  <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-bootstrap" href="#!">Bootstrap</a></li>
-                  <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-wordpress" href="#!">WordPress</a></li>
-                  <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-frontend" href="#!">Frontend</a></li>
-                </ul>
-              </div>
-            </div>
-            <!-- <<< фильтр портфолио <<<-->
-            <div class="section-project-cards">
-              <div class="project-cards">
-                <!-- >>> Строка двух больших карточек >>>-->
-                <div class="project-cards__row">
-                  <!-- >>> Карточка проекта >>>-->
-                  <div class="project-card row-half filter-bootstrap filter-wordpress filter-frontend">
-                    <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-001.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
-                    <div class="project-card__title title-4">Верстка “Форест тревел”</div>
-                    <div class="project-card__desc">Верстка многостраничного сайта.</div>
-                  </div>
-                  <!-- <<< Карточка проекта <<<-->
-                  <!-- >>> Карточка проекта >>>-->
-                  <div class="project-card row-half filter-bootstrap filter-wordpress filter-frontend">
-                    <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-002.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
-                    <div class="project-card__title title-4">Верстка “Форест тревел”</div>
-                    <div class="project-card__desc">Верстка многостраничного сайта.</div>
-                  </div>
-                  <!-- <<< Карточка проекта <<<-->
-                </div>
-                <!-- <<< Строка двух больших карточек <<<-->
-                <!-- >>> Строка трех мальнких карточек >>>-->
-                <div class="project-cards__row" id="project-cards-list">
-                  <!-- >>> Карточка проекта >>>-->
-                  <div class="project-card row-third mix filter-bootstrap filter-frontend">
-                    <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-003.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
-                    <div class="project-card__title title-4">Верстка “Форест тревел”</div>
-                    <div class="project-card__desc">Верстка многостраничного сайта.</div>
-                  </div>
-                  <!-- <<< Карточка проекта <<<-->
-                  <!-- >>> Карточка проекта >>>-->
-                  <div class="project-card row-third mix filter-bootstrap filter-wordpress">
-                    <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-004.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
-                    <div class="project-card__title title-4">Верстка “Форест тревел”</div>
-                    <div class="project-card__desc">Верстка многостраничного сайта.</div>
-                  </div>
-                  <!-- <<< Карточка проекта <<<-->
-                  <!-- >>> Карточка проекта >>>-->
-                  <div class="project-card row-third mix filter-frontend">
-                    <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-005.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
-                    <div class="project-card__title title-4">Верстка “Форест тревел”</div>
-                    <div class="project-card__desc">Верстка многостраничного сайта.</div>
-                  </div>
-                  <!-- <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj003)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj004)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj005)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj003)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj004)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                  <!--// >>> Карточка проекта >>>-->
-                  <!--+project-card(projectCards.prj005)(class="row-third mix")-->
-                  <!--// <<< Карточка проекта <<<-->
-                </div>
-                <!-- <<< Строка трех мальнких карточек <<<-->
-              </div>
-            </div><a class="project-card__link" href="#!">Смотреть все работы</a>
+      <!-- >>> Секция проектов >>>-->
+      <section class="section-portfolio" id="projects">
+        <div class="container">
+          <div class="section-portfolio__title">
+            <h2 class="title-2 anderline-dicoration anderline-dicoration--midl">Портфолио</h2>
           </div>
+          <!-- >>> фильтр портфолио >>>-->
+          <div class="section-portfolio-filter">
+            <div class="portfolio-filter">
+              <ul class="portfolio-filter__list">
+                <li class="portfolio-filter__item"><a class="filter" data-filter="all" href="#!">Все работы</a></li>
+                <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-bootstrap" href="#!">Bootstrap</a></li>
+                <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-wordpress" href="#!">WordPress</a></li>
+                <li class="portfolio-filter__item"><a class="filter" data-filter=".filter-frontend" href="#!">Frontend</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <<< фильтр портфолио <<<-->
+          <div class="section-project-cards">
+            <div class="project-cards">
+              <!-- >>> Строка двух больших карточек >>>-->
+              <div class="project-cards__row">
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-half filter-bootstrap filter-wordpress filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-001.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-half filter-bootstrap filter-wordpress filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-002.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+              </div>
+              <!-- <<< Строка двух больших карточек <<<-->
+              <!-- >>> Строка трех мальнких карточек >>>-->
+              <div class="project-cards__row" id="project-cards-list">
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-003.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-wordpress">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-004.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-005.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-003.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-wordpress">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-004.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-005.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-003.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-bootstrap filter-wordpress">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-004.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+                <!-- >>> Карточка проекта >>>-->
+                <div class="project-card row-third mix filter-frontend">
+                  <div class="project-card__img-wrapper"><img class="project-card__img" src="./img/projects/project-img-005.jpg" alt="Верстка “Форест тревел”"><a class="btn project-card__btn" href="#">Смотреть проект</a></div>
+                  <div class="project-card__title title-4">Верстка “Форест тревел”</div>
+                  <div class="project-card__desc">Верстка многостраничного сайта.</div>
+                </div>
+                <!-- <<< Карточка проекта <<<-->
+              </div>
+              <!-- <<< Строка трех мальнких карточек <<<-->
+            </div>
+          </div><a class="project-card__link" href="#!">Смотреть все работы</a>
         </div>
-        <!-- <<< Секция проектов <<<-->
+      </section>
+      <!-- <<< Секция проектов <<<-->
 <!-- >>> Секция как я работаю >>>-->
-<div class="section-technology">
+<section class="section-technology" id="technology">
   <div class="container">
     <div class="section-technology__title">
       <h2 class="title-2"><span class="anderline-dicoration anderline-dicoration--midl">Как я</span><br class="br-mobile"><span class="anderline-dicoration anderline-dicoration--midl"> работаю</span></h2>
@@ -253,12 +282,12 @@
         </div>
       </div>
       <!-- <<< Карта технологии <<<-->
-      <!-- <<< Секция как я работаю <<<-->
     </div>
   </div>
-</div>
+</section>
+<!-- <<< Секция как я работаю <<<-->
 <!-- >>> Контакты >>>-->
-<div class="section-contacts" id="contacts">
+<section class="section-contacts" id="contacts">
   <div class="container">
     <div class="section-contacts__title">
       <h2 class="title-2 anderline-dicoration anderline-dicoration--midl">Контакты</h2>
@@ -313,11 +342,10 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 <!-- <<< Контакты <<<-->
-      </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
 <div class="footer__copyright">| © 2020 — Дмитрий Фокин</div>
 <div class="footer-desc">Веб-разработик из Москвы, занимаюсь версткой и созданием сайтов.<br>				Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a class="footer-desc__link" href="https://www.webcademy.ru/">WebCademy.ru</a></div>
@@ -325,6 +353,8 @@
     </footer>
     <script src="https://kit.fontawesome.com/d56abc1d9a.js" crossorigin="anonymous"></script>
     <script src="libs/js/jquery-3.4.1.min.js"></script>
-    <script src="libs/js/mixitup.min.js"></script>
+    <script src="libs/js/jquery.mixitup.min.js"></script>
+    <script src="libs/js/nav.js"></script>
+    <script src="js/main.js"></script>
   <script type="text/javascript" src="js/main.js"></script></body>
 </html>
