@@ -11,11 +11,36 @@
 }
 
 .in-touch__title {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
+
+	@media (min-width: 768px) {
+		margin-bottom: 35px;
+	}
+
+	@media (min-width: 1200px) {
+	}
 }
 
 .in-touch__social-icons {
-	margin-bottom: 35px;
+	margin-bottom: 20px;
+	@media (min-width: 768px) {
+		margin-bottom: 35px;
+	}
+
+	@media (min-width: 1200px) {
+	}
+
+	& .social-icons {
+		justify-content: stretch;
+
+		& a {
+			margin-right: 28px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 .in-touch__email {

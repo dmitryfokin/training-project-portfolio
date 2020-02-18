@@ -2,8 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 
-	margin: 0 auto 40px;
+	margin: 0 auto 35px;
 
+	padding-left: 15px;
 	padding-right: 15px;
 
 	@media (min-width: 768px) {
@@ -23,8 +24,6 @@
 
 .nav-logo {
 	position: relative;
-
-	padding: 0 15px;
 
 	font-size: 42px;
 	color: rgb(0, 0, 0);
@@ -233,9 +232,13 @@
 
 		margin-bottom: 22px;
 
+		width: fit-content;
+
 		color: #000;
 		font-size: 20px;
 		font-weight: 700;
+		padding-left: 5px;
+		padding-right: 5px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -271,5 +274,11 @@
 
 	& .logo {
 		margin-bottom: 25px;
+	}
+}
+
+.mobile-nav-social-icons {
+	& .social-icons {
+		font-size: 40px;
 	}
 }

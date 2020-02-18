@@ -1,8 +1,11 @@
 .section-portfolio {
-	padding-top: 120px;
+	padding-top: 60px;
 	padding-bottom: 60px;
 
 	background-color: #f4f8f9;
+	@media (min-width: 768px) {
+		padding-top: 120px;
+	}
 }
 
 .section-portfolio__title {
@@ -126,8 +129,8 @@
 	top: 100%;
 	left: 50%;
 
-	width: 300px;
-
+	width: 70%;
+	height: auto;
 	transition: top 0.5s;
 
 	transform: translateX(-50%);
@@ -136,6 +139,13 @@
 	color: @color-focus-1;
 
 	z-index: 3;
+
+	@media (min-width: 768px) {
+		width: 300px;
+	}
+
+	@media (min-width: 1200px) {
+	}
 
 	&:hover {
 		background-color: @color-focus-1;
