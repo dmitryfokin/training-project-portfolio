@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const autoprefixer = require('autoprefixer');
 
 const dist = 'dist'
 //const dist = 'docs'
@@ -38,6 +39,17 @@ module.exports = {
             options: {
               url: false,
               sourceMap: true,
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version']
+                })
+              ],
+              sourceMap: true
             }
           },
           {
