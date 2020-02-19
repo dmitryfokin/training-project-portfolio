@@ -14,10 +14,10 @@
 	margin-bottom: 20px;
 
 	@media (min-width: 768px) {
-		margin-bottom: 35px;
 	}
 
 	@media (min-width: 1200px) {
+		margin-bottom: 35px;
 	}
 }
 
@@ -45,9 +45,16 @@
 
 .in-touch__email {
 	text-decoration: underline;
-	font-size: 24px;
 	color: @color-main-font;
 	line-height: 1.2;
+
+	@media (min-width: 768px) {
+		font-size: 20px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 24px;
+	}
 
 	&:hover {
 		color: @color-alt-1;
