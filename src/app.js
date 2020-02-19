@@ -20,12 +20,13 @@ let ready = $(document).ready(function () {
   $("#backTop").hide()
 
   window.addEventListener('scroll', throttle(function () {
-    if ($(this).scrollTop() > 200) {
-      $("#backTop").fadeIn()
-    } else {
-      $("#backTop").fadeOut()
-    }
-  }, 300))
+      if ($(this).scrollTop() > 500) {
+        $("#backTop").fadeIn()
+      } else {
+        $("#backTop").fadeOut()
+      }
+    }.bind(this), 200)
+  )
 
   // filter projects
   $('#project-cards-list').mixItUp()
@@ -59,14 +60,14 @@ let ready = $(document).ready(function () {
 
   // tools function
   function throttle(fn, wait) {
-    let time = Date.now()
+    let time = Date.now();
 
-    return () => {
+    return function () {
       if ((time + wait - Date.now()) < 0) {
-        fn()
-        time = Date.now()
+        fn();
+        time = Date.now();
       }
     }
   }
 
-});
+})

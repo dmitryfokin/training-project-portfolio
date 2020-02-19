@@ -4,18 +4,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
+const dist = 'dist'
+//const dist = 'docs'
+
 module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src', 'app.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, dist),
     filename: 'js/main.js',
   },
   devServer: {
     port: 4200,
     host: 'localhost',
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(__dirname, dist),
     open: true,
   },
   module: {
@@ -53,16 +56,16 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'src', 'img'),
-        to: path.resolve(__dirname, 'dist', 'img')
+        to: path.resolve(__dirname, dist, 'img')
       },
       {
         from: path.resolve(__dirname, 'src', 'libs'),
-        to: path.resolve(__dirname, 'dist', 'libs')
+        to: path.resolve(__dirname, dist, 'libs')
       },
     ]),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'pug', 'pages', 'index.pug'),
-      filename: path.resolve(__dirname, 'dist', 'index.html')
+      filename: path.resolve(__dirname, dist, 'index.html')
     }),
     new MiniCSSExtractPlugin({
       filename: `./css/[name].css`
