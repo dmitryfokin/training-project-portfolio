@@ -17,22 +17,14 @@ let ready = $(document).ready(function () {
     },
   })
 
-  $("#backTop").hide()
-
-  window.addEventListener('scroll', throttle(function () {
-      if ($(this).scrollTop() > 500) {
-        $("#backTop").fadeIn()
-      } else {
-        $("#backTop").fadeOut()
-      }
-    }.bind(this), 200)
-  )
-
   // filter projects
   $('#project-cards-list').mixItUp()
 
   // form callback
   $('.form-callback__input, .form-callback__textarea').focus(function (e) {
+    console.log(this)
+    console.log(e)
+
     e.preventDefault()
 
     $(this).parent().children(".fake-placeholder").addClass('active')
@@ -40,6 +32,7 @@ let ready = $(document).ready(function () {
 
   $('.form-callback__input, .form-callback__textarea').blur(function (e) {
     e.preventDefault()
+
     if (!(this).value.trim()) {
       $(this).parent().children(".fake-placeholder").removeClass('active')
     }
@@ -52,6 +45,18 @@ let ready = $(document).ready(function () {
   const body = document.querySelector('body')
 
   menuToggle.onclick = function () {
+    toggleMobileMenu()
+  }
+
+  mobileNavContainer.onclick = function (event) {
+
+    console.log(event.target.localName)
+    if (event.target.localName === 'a' || event.target.localName === 'i') {
+      toggleMobileMenu()
+    }
+  }
+
+  function toggleMobileMenu() {
     menuToggle.classList.toggle('menu-icon-active')
     mobileNavContainer.classList.toggle('mobile-nav--active')
     mobileOverlay.classList.toggle('mobile-nav-overlay--active')
@@ -60,12 +65,12 @@ let ready = $(document).ready(function () {
 
   // tools function
   function throttle(fn, wait) {
-    let time = Date.now();
+    let time = Date.now()
 
     return function () {
       if ((time + wait - Date.now()) < 0) {
-        fn();
-        time = Date.now();
+        fn()
+        time = Date.now()
       }
     }
   }

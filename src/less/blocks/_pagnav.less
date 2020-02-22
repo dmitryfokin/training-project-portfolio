@@ -32,24 +32,27 @@
 }
 
 #backTop {
-	display: none;
+
+	display: block;
+	height: 56px;
+	width: 25px;
+
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+
+	font-size: 40px;
+	color: @color-main;
+
+	cursor: pointer;
+
+	z-index: 5;
+
+	&:hover {
+		color: @color-focus-1;
+	}
 
 	@media (min-width: 1200px) {
-		display: block;
-		height: 56px;
-		width: 25px;
-
-		position: fixed;
-		right: 40px;
-		bottom: 40px;
-
-		font-size: 40px;
-		color: @color-main;
-
-		z-index: 2;
-
-		&:hover {
-			color: @color-focus-1;
-		}
+		display: none;
 	}
 }

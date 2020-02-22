@@ -392,22 +392,23 @@ ul li::selection,
   }
 }
 #backTop {
-  display: none;
+  display: block;
+  height: 56px;
+  width: 25px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-size: 40px;
+  color: #fbdb4b;
+  cursor: pointer;
+  z-index: 5;
+}
+#backTop:hover {
+  color: #ea736d;
 }
 @media (min-width: 1200px) {
   #backTop {
-    display: block;
-    height: 56px;
-    width: 25px;
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    font-size: 40px;
-    color: #fbdb4b;
-    z-index: 2;
-  }
-  #backTop:hover {
-    color: #ea736d;
+    display: none;
   }
 }
 .social-icons {
@@ -419,9 +420,15 @@ ul li::selection,
           justify-content: space-between;
   height: 48px;
   font-size: 48px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .social-icons a {
   line-height: 48px;
+}
+.social-icons a:hover {
+  opacity: 0.5;
 }
 .social-icon-github {
   color: #212121;
@@ -615,6 +622,8 @@ ul li::selection,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: -80px;
+  padding-top: 80px;
 }
 @media (min-width: 768px) {
   .header-bottom-row {
@@ -736,8 +745,9 @@ ul li::selection,
   }
   .nav-social-icons a {
     margin-right: 18px;
-    width: 32px;
-    height: 32px;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
     font-size: 32px;
     color: #000;
   }
