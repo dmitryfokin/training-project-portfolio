@@ -5,8 +5,8 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer');
 
-//const dist = 'dist'
-const dist = 'docs'
+const dist = 'dist'
+//const dist = 'docs'
 
 module.exports = {
   entry: {
